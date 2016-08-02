@@ -1,19 +1,24 @@
 body {
-  background-color: #ccc;
+  background: url('../img/anyspace-cover-blur.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.carousel {
-    height: 768px;
+.main-caption {
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,.8)
 }
 
-.carousel .item {
-  height: 768px;
-}
-
-.carousel-inner > .item > img {
-  height: 768px;
-}
-
-.carousel-caption {
-  padding-bottom: 420px;
-}
+#search {
+  text-align: center;
+  background-color: #222;
+  padding: 1em 0 1em 0;
+  border-radius: 4px;
+}         
+         
+#search input, select {
+  height: 2em;  
+}         

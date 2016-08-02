@@ -1,0 +1,36 @@
+* {
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: none;
+	-moz-appearance: none;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;		/* change as necessary */
+}
+body, a, input, textarea {
+     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+a:not(.email), a:link:not(.email), a:visited:not(.email), a:hover:not(.email), a:active:not(.email) {
+	text-decoration: none;
+	color: inherit;
+}
+.clear {
+	clear: both;
+}
+
+
+/* Buttons */
+
+.button, button, input[type="submit"], input[type="button"] {
+	font-size: 18px;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	display: inline-block;
+	padding: 15px 25px 15px 25px;
+	z-index: 1;
+}
+.button:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+	opacity: 0.7;
+}
