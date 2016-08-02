@@ -1,0 +1,19 @@
+body {
+  background-color: #ccc;
+}
+
+.carousel {
+    height: 768px;
+}
+
+.carousel .item {
+  height: 768px;
+}
+
+.carousel-inner > .item > img {
+  height: 768px;
+}
+
+.carousel-caption {
+  padding-bottom: 420px;
+}
