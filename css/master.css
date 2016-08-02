@@ -20,6 +20,12 @@ body {
   margin: 0 12em 0 12em;
   border-radius: 8px;
 }         
+
+#search select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
          
 #search input, #search select {
   color: white;
