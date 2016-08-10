@@ -8,13 +8,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>AnySpace | Get AnySpace For Any Event</title>
+    <link rel="shortcut icon" href="images/icon.png">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='fonts/glyphicons/css/glyphicons.css'>
+    <script src='fonts/glyphicons/scripts/modernizr.js'></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,11 +32,8 @@
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/browsers.js"></script>
+    <script src="js/script.js"></script> <script src="js/browsers.js"></script>
 
     <!-- PLUGINS -->
     <link rel="stylesheet" type="text/css" href="plugins/datetimepicker-master/jquery.datetimepicker.css"/ >
@@ -40,6 +44,7 @@
   <body class="venue-page">
     <div class="navbar-wrapper">
       <div class="container">
+
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
             <div class="navbar-header">
@@ -49,60 +54,46 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">AnySpace</a>
+              <a class="navbar-brand" href="#"><img src = "img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Login</a></li>
-                <li><a href="#about">Share Your Space</a></li>
+                <li class=""><a href="#">Learn More</a></li>
+                <li><a href="#">Contact</a></li>
               </ul>
             </div>
           </div>
         </nav>
-        <div>
-          <h1 class="venue-title">PUZZLE'S BAR</h1>
-          <p class="venue-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fringilla ornare risus non maximus. Vivamus ut venenatis dui.            Sed cursus lacus venenatis dictum ullamcorper. Duis pharetra urna vitae scelerisque tempus. Phasellus aliquam, nisi et faucibus consectetur, arcu justo                   efficitur ante, quis posuere nibh augue vel ante. Sed feugiat pellentesque turpis eu hendrerit. Suspendisse finibus metus ut nisi vestibulum placerat. Donec              eget elementum quam. Morbi varius velit quam, quis convallis justo scelerisque non.</p>
-          <h2 class="venue-location">BRIDGEPORT | 2940 S Bonfield St, Chicago, IL 60608</h2>
-          <h3 class="venue-subheading">ABOUT THIS VENUE</h3>
-          <h3 class="venue-subheading">AMENITIES</h3>
-          <h3 class="venue-subheading">AVAILABILITY</h3>
-          <h3 class="venue-subheading">VENUE RULES</h3>
-          <h3 class="venue-subheading">CANCELLATION POLICY & SECURITY DEPOSIT</h3>
-    </div>
     
-
-<!--
-<div id="search">
-    <form method="get">
-        <input type="text" placeholder="Location"/>
-        <input type="text" class="datetimepicker" placeholder="Start time"/>
-        <input type="text" class ="datetimepicker" placeholder="End time"/>
-        <select>
-            <option disabled selected>Capacity</option>
-            <option>1-10</option>
-            <option>11-30</option>
-            <option>31-50</option>
-            <option>51-70</option>
-            <option>71-100</option>
-            <option>100+</option>
-        </select>
-        <input type="submit" value="Search"/>
-    </form>
-</div>
--->
+        <div class="venue-detail">
+          <h1>PUZZLE'S BAR</h1>
+          <h2>BRIDGEPORT | 2940 S Bonfield St, Chicago, IL 60608</h2>
+          <h3>ABOUT THIS VENUE</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elite. Vestibulum fringilla ornare risus non maximus. Vivamus ut venenatis dui.Sed cursus lacus venenatis dictum ullamcorper. Duis pharetra urna vitae scelerisque tempus. Phasellus aliquam, nisi et faucibus consectetur, arcu justo efficitur ante, quis posuere nibh augue vel ante. Sed feugiat pellentesque turpis eu hendrerit. Suspendisse finibus metus ut nisi vestibulum placerat. Donec eget elementum quam. Morbi varius velit quam, quis convallis justo scelerisque non.</p>
+          <h3>AMENITIES</h3>
+          <h3>AVAILABILITY</h3>
+          <h3>VENUE RULES</h3>
+          <h3>CANCELLATION POLICY & SECURITY DEPOSIT</h3>
+        </div>
+    
       </div>
     </div>
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/af.js"></script>
     <script>
         jQuery('.datetimepicker').datetimepicker({
             minDate:'0',
-            format:'m/d/y h:00 a',      //can change to "h:m" later, but will need add script to handle               making it default to on the hour
-            formatTime: 'h:00 a'        //can change to "h:m" later, but will need add script to handle               making it default to on the hour
+            format:'m/d/y H:00 a',      //can change to "h:m" later, but will need add script to handle               making it default to on the hour				weird error where always goes to AM, unless in  24-hour time
+            formatTime: 'h:00 a',        //can change to "h:m" later, but will need add script to handle               making it default to on the hour
+            roundTime: 'ceil',
         });
     </script>
 
