@@ -2,6 +2,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.navbar {
+  margin-bottom: 0px;
+}
+
 .landing-page {
   background: url('../img/anyspace-cover-blur.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -10,14 +14,13 @@ body {
   background-size: cover;
 }
 
-.venue-page {
+.venue-cover {
   background: url('../img/anyspace-venue.jpg') no-repeat scroll;
-  background-size: cover;
-  
+  height: 500px;
 }
 
 .venue-detail {
-  padding: 24em 4em 0 4em;
+  padding: 2% 40% 0 20%;
 }
 
 .venue-detail h1 {
@@ -26,6 +29,16 @@ body {
 
 .venue-detail h2 {
   font-size: 1.6em;
+  margin-top: 0px;
+  margin-bottom: 2em;
+}
+
+.venue-detail h3 {
+  font-weight: bold;
+}
+
+.venue-detail p {
+  font-size: 1.2em;
 }
 
 .main-caption {
@@ -115,8 +128,6 @@ body {
 .navbar-inverse {
 	background-color: rgba(0,0,0,.7);
 }
-
-
 
 #search input, #search select {
 	border: none;
