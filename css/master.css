@@ -1,9 +1,15 @@
-body {
+.landing-page {
   background: url('../img/anyspace-cover-blur.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.venue-page {
+  background: url('../img/anyspace-venue.jpg') no-repeat scroll;
+  background-size: cover;
+  
 }
 
 .main-caption {
