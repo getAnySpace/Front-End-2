@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>AnySpace | Get AnySpace For Any Event</title>
+    <link rel="shortcut icon" href="images/icon.png">
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -47,19 +48,23 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">AnySpace</a>
+              <a class="navbar-brand" href="#"><img src = "img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Login</a></li>
-                <li><a href="#about">Share Your Space</a></li>
+                <li class=""><a href="#">Learn More</a></li>
+                <li><a href="#">Contact</a></li>
               </ul>
             </div>
           </div>
         </nav>
     
         <div class="main-caption">
-          <h1>Get AnySpace, for any event</h1>
+			<div id="logo">
+				<h2>GET</h2>
+					<img src="img/anyspace-text-logo.svg" alt="AnySpace Text Logo"/>
+					<h2>FOR ANY EVENT</h2>
+				</div>
         </div>
 
 <div id="search">
@@ -90,12 +95,13 @@
     <script src="/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/af.js"></script>
     <script>
         jQuery('.datetimepicker').datetimepicker({
             minDate:'0',
-            format:'m/d/y h:00 a',      //can change to "h:m" later, but will need add script to handle               making it default to on the hour
-            formatTime: 'h:00 a'        //can change to "h:m" later, but will need add script to handle               making it default to on the hour
+            format:'m/d/y H:00 a',      //can change to "h:m" later, but will need add script to handle               making it default to on the hour				weird error where always goes to AM, unless in  24-hour time
+            formatTime: 'h:00 a',        //can change to "h:m" later, but will need add script to handle               making it default to on the hour
+            roundTime: 'ceil',
         });
     </script>
 
