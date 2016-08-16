@@ -19,7 +19,7 @@ body {
   height: 500px;
 }
 
-.venue-detail {
+.venue-detail-backup {
   padding: 2% 40% 0 20%;
 }
 
@@ -39,6 +39,10 @@ body {
 
 .venue-detail p {
   font-size: 1.2em;
+}
+
+.venue-box {
+  margin-top: -6em;
 }
 
 .main-caption {
