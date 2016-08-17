@@ -27,7 +27,7 @@ footer ul {
 }
 
 footer .footer-text {
-  padding: 0 400px 0 400px;
+  padding: 0 300px 0 300px;
 }
 
 footer li {
@@ -53,6 +53,79 @@ footer .pull-left {
   font-size: 100px;
 }
 
+.amenities ul {
+  padding-left: 0px;
+}
+
+.amenities li {
+  display: block;
+  font-size: 1.4em;
+  line-height: 2em;
+}
+
+.amenities li:before {
+    content: "\e659";
+    font-family: 'Glyphicons Regular';
+    position: relative;
+    top: 3px;
+    margin-right: 1em;
+    color: #ccc;  
+}
+
+.availability li{
+  text-align: right; 
+  list-style: none;
+  font-size: 1.4em;
+}
+
+.rules ul {
+  padding-left: 0px;
+}
+
+.rules li {
+  display: block;
+  font-size: 1.4em;
+  line-height: 2em;
+}
+
+.rules li:before {
+    content: "\e224";
+    font-family: 'Glyphicons Regular';
+    position: relative;
+    top: 3px;
+    margin-right: 1em;
+    color: #ccc;  
+}
+
+.policy {
+  padding-left: 0px;
+}
+
+.policy li {
+  display: block;
+  font-size: 1.4em;
+  line-height: 2em;
+}
+
+.policy li:before {
+    content: "\e176";
+    font-family: 'Glyphicons Regular';
+    position: relative;
+    top: 3px;
+    margin-right: 1em;
+    color: #ccc;  
+}
+
+.venue-photos ul{
+  padding-left: 0px;
+}
+
+.venue-photos li {
+  display: inline-block;
+  list-style: none;
+  padding: 0px 1em 1em 0px;
+}
+
 .landing-page {
   background: url('../img/anyspace-cover-blur.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -66,10 +139,18 @@ footer .pull-left {
   height: 500px;
 }
 
+.venue-block {
+  border-width: 1px;
+  border-bottom: 1px solid;
+  padding-bottom: 1em;
+}
 .venue-detail-backup {
   padding: 2% 40% 0 20%;
 }
 
+.venue-detail {
+  padding-bottom: 2em;
+}
 .venue-detail h1 {
   font-weight: bold;
 }
