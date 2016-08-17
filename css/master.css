@@ -141,7 +141,7 @@ footer .pull-left {
 
 .venue-block {
   border-width: 1px;
-  border-bottom: 1px solid;
+  border-bottom: 1px #d3d3d3 solid;
   padding-bottom: 1em;
 }
 .venue-detail-backup {
