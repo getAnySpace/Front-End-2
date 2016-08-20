@@ -11,3 +11,16 @@ function init() {
 	var search = jQuery("#search");
 	
 }
+
+
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+    var diff = 504;
+    
+    if (scroll >= diff) {
+    	jQuery(".col-md-2.venue-box > *").addClass("fix");
+    }
+    else {
+    	jQuery(".col-md-2.venue-box > *").removeClass("fix");
+    }
+});

@@ -307,3 +307,9 @@ footer .pull-left {
     display: block;
     margin: auto;
 }
+
+.col-md-2.venue-box > *.fix {
+	position: fixed;
+    width: inherit;
+    top: 0;
+}
