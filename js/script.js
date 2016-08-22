@@ -15,7 +15,7 @@ function init() {
 
 $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
-    var diff = 504;
+    var diff = jQuery(".col-md-2.venue-box").offset().top;
     
     if (scroll >= diff) {
     	jQuery(".col-md-2.venue-box > *").addClass("fix");
