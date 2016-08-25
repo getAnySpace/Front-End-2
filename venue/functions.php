@@ -48,5 +48,13 @@
 	function getRules() {
 		
 	}
+	
+	/**
+	 * will need IF LENGTH > #, THEN MAKE 2 COLUMNS
+	 * @return arrayed output of <li>'s with policies
+	 */
+	function getPolicies() {
+		
+	}
 
 ?>	
