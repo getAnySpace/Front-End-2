@@ -1,13 +1,18 @@
 <?php
-	require "../connect.php";
-	$con = null;
-
-	function init() {
-		$con = new connect('localhost', 'root', 'password', 'cs425');
-		$con
-	}
+	include '../connect.php';
+	//$con = null;
+	$dataBase = new connect('localhost', 'root', 'password', 'anyspace');
+	$dataBase->selectTable('space');
 	
-	function getName() {
+	function getName() {			//TODO: wtf...
+		$db = $GLOBALS['dataBase'];
+		$result = $db->selectAny('name', 'space', 'venue_id', 1);
+		print_r ($result);
+		//$db->resultArray();
+		
+		while ($row = $result->fetch_assoc()) {
+        echo $row['name']."<br>";
+    }
 		
 	}
 	
