@@ -12,16 +12,16 @@
 		<link rel="shortcut icon" href="images/icon.png">
 
 		<!-- Bootstrap core CSS -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-		<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
 		<!-- FONTS -->
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link rel='stylesheet' href='fonts/glyphicons/css/glyphicons.css'>
-		<link rel='stylesheet' href='fonts/social/css/social.css'>
-		<script src='fonts/glyphicons/scripts/modernizr.js'></script>
+		<link rel='stylesheet' href='../fonts/glyphicons/css/glyphicons.css'>
+		<link rel='stylesheet' href='../fonts/social/css/social.css'>
+		<script src='../fonts/glyphicons/scripts/modernizr.js'></script>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -30,11 +30,11 @@
 		<![endif]-->
 
 		<!-- Custom styles for this template -->
-		<link href="css/carousel.css" rel="stylesheet">
-		<link href="css/master.css" rel="stylesheet">
+		<link href="../css/carousel.css" rel="stylesheet">
+		<link href="../css/master.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-		<script src="js/script.js"></script>
-		<script src="js/browsers.js"></script>
+		<script src="../js/script.js"></script>
+		<script src="../js/browsers.js"></script>
 
 	</head>
 	<!-- NAVBAR
@@ -51,7 +51,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.html"><img src = "img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
+							<a class="navbar-brand" href="index.html"><img src = "../img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">

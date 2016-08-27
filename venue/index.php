@@ -40,7 +40,7 @@
 				<div class="venue-block venue-availability">
 					<h3>AVAILABILITY</h3>
 					<ul class="availability">
-						<?php getAvailability(); ?>s
+						<?php getAvailability(); ?>
 					</ul>
 				</div>
 				<div class="venue-block venue-photos">
