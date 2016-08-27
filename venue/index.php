@@ -49,7 +49,12 @@
 						<?php getPhotos(); ?>
 					<ul>
 					<p>
-						Google Maps code		//TODO: integrate with google maps; use getAddress()
+						<img src="https://maps.googleapis.com/maps/api/staticmap?center=" + <?php getAddress(); ?> + 
+            			"&zoom=13
+            			&size=600x300
+            			&maptype=roadmap
+						&markers=color:purple%7Clabel:AS%7C" + <?php getAddress(); ?> + 
+            			"&key=AIzaSyCmeN8Mu9qlrwSCNLGUdjw5R0Gex6tr9Qg"/>
 					</p>
 				</div>
 				<div class="venue-block venue-rules">
