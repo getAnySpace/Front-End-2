@@ -4,6 +4,7 @@
 
 	function init() {
 		$con = new connect('localhost', 'root', 'password', 'cs425');
+		$con
 	}
 	
 	function getName() {
