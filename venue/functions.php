@@ -1,9 +1,9 @@
 <?php
 	require "../connect.php";
-	$con = new connect('localhost', 'root', 'password', 'cs425');
+	$con = null;
 
 	function init() {
-		
+		$con = new connect('localhost', 'root', 'password', 'cs425');
 	}
 	
 	function getName() {

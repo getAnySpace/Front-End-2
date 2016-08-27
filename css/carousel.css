@@ -29,8 +29,8 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
-.navbar-wrapper .navbar .container {
-  /*width: auto;*/
+.navbar-wrapper .navbar:not(.navbar-static-top) .container {
+  width: auto;
 }
 
 

@@ -1,3 +1,7 @@
+<?php
+	include 'functions.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -8,7 +12,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Puzzle's Bar | AnySpace</title>
+		<title><?php getName(); ?> | AnySpace</title>
 		<link rel="shortcut icon" href="images/icon.png">
 
 		<!-- Bootstrap core CSS -->
