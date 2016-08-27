@@ -1,5 +1,6 @@
 <?php
 	include 'functions.php';
+	//init();
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title><?php getName(); ?> | AnySpace</title>
+		<title><?php //getName(); ?> | AnySpace</title>
 		<link rel="shortcut icon" href="images/icon.png">
 
 		<!-- Bootstrap core CSS -->
