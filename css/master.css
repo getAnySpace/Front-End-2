@@ -6,6 +6,11 @@ body {
   margin-bottom: 0px;
 }
 
+.col-md-4 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 
 footer {
   width: 100%;
@@ -171,6 +176,68 @@ footer .pull-left {
 
 .venue-box {
   margin-top: -6em;
+  padding: 0 0 0 0;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.venue-box-top {
+  background-color: #514ca9;
+  color: white; 
+  padding: .6em 0 0 0;
+}
+
+.venue-price {
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: bold;
+  float: left;
+  padding: 0 0 0 .6em;
+}
+
+.rate-unit {
+  font-size: 1.6em;
+  float: right;
+  line-height: 2.6em;
+  padding: 0 1.2em 0 0 ;
+}
+
+.venue-options {
+  margin-left: 1.6em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ .venue-options select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid gray;
+  border-radius: 0px;
+  outline: none;
+  padding: .4em 1em .4em 1em;
+  margin: .4em .2em .4em .2em;
+  width: 9em;
+}
+
+.venue-actions button {
+  width: 100%;
+  border: none;
+  display: block;
+  font-size: 1.2em;
+}
+
+button.book-now {
+  background-color: #514ca9;
+  color: white;
+  padding: .6em 0 .6em 0;
+  
+}
+
+button.contact-venue {
+  background-color: white;
+  padding: .6em 0 .6em 0;
 }
 
 .main-caption {
@@ -306,14 +373,6 @@ footer .pull-left {
 	max-width: 100%;
     display: block;
     margin: auto;
-}
-.col-md-2.venue-box > * {
-	position: absolute;
-}
-.col-md-2.venue-box > *.fix {
-	position: fixed;
-    width: inherit;
-    top: 0;
 }
 
 
