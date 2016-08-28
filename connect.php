@@ -21,6 +21,10 @@ class connect
 		$this->con = $con;
 	}
 	
+	function setId($newId) {
+		$this->id = $newId;
+	}
+	
 	function selectTable($table)
 	{
 		$sql="SELECT * FROM " . $table;
