@@ -19,7 +19,7 @@
 		<meta name="author" content="">
 
 		<title><?php getName(); ?> | AnySpace</title>
-		<link rel="shortcut icon" href="../images/icon.png">
+		<link rel="shortcut icon" href="../img/icon.png">
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.html"><img src = "../img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
+							<a class="navbar-brand" href="../index.html"><img src = "../img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
