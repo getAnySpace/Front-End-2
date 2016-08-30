@@ -13,6 +13,7 @@
 		echo $a[0]['name'];
 	}
 	
+	function getNeighbourhood() {		//TODO: add column to database or use google api
 		/*$db = $GLOBALS['dataBase'];
 		$result = $db->selectAny('neighbourhood', 'space', 'venue_id', 1);
 		$a = $db->resultArray();
