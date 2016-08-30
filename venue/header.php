@@ -3,8 +3,8 @@
 	
 	$venue_id;
 	
-	if (isset($_GET('venue_id'))) {
-		$venue_id = $_GET('venue_id');
+	if (isset($_GET['venue_id'])) {
+		$venue_id = $_GET['venue_id'];
 	}
 ?>
 
@@ -50,6 +50,7 @@
 	<!-- NAVBAR
 	================================================== -->
 	<body class="venue-page">
+		<?php echo '<style> .venue-cover { background-image: url("' . getBackground() . '"); } </style>'; ?>
 		<div class="navbar-wrapper">
 			<div class="container">
 				<nav class="navbar navbar-inverse navbar-static-top">
