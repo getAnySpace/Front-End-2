@@ -31,6 +31,7 @@
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/ie10-viewport-bug-workaround.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/af.js"></script>
+<script src="../js/customSelect.js"></script>
 <script>
 	jQuery('.datetimepicker').datetimepicker({
 		minDate : '0',
