@@ -213,7 +213,8 @@ class connect
 		$wheref = mysqli_real_escape_string($this->con, $wheref);
 		$wheree = mysqli_real_escape_string($this->con, $wheree);
 		
-		$sql = "SELECT " . $flds . " FROM " . $from . " WHERE '" . $wheref . "'='" . $wheree . "'";
+		$sql = "SELECT `" . $flds . "` FROM `" . $from . "` WHERE `" . $wheref . "`=" . $wheree . "";
+		//print_r($sql);
 		
 		$result = mysqli_query($this->con,$sql);
 		

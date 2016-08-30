@@ -3,17 +3,14 @@
 	//$con = null;
 	$dataBase = new connect('localhost', 'root', 'password', 'anyspace');
 	$dataBase->selectTable('space');
+	$dataBase->json();
 	
 	function getName() {			//TODO: wtf...
 		$db = $GLOBALS['dataBase'];
 		$result = $db->selectAny('name', 'space', 'venue_id', 1);
-		print_r ($result);
-		//$db->resultArray();
+		$a = $db->resultArray();
 		
-		while ($row = $result->fetch_assoc()) {
-        echo $row['name']."<br>";
-    }
-		
+		echo $a[0]['name'];
 	}
 	
 	function getNeighbourhood() {
