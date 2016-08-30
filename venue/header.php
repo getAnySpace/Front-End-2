@@ -1,6 +1,11 @@
 <?php
 	include 'functions.php';
-	//init();
+	
+	$venue_id;
+	
+	if (isset($_GET('venue_id'))) {
+		$venue_id = $_GET('venue_id');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +19,7 @@
 		<meta name="author" content="">
 
 		<title><?php getName(); ?> | AnySpace</title>
-		<link rel="shortcut icon" href="images/icon.png">
+		<link rel="shortcut icon" href="../images/icon.png">
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">

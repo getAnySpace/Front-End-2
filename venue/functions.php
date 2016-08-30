@@ -5,7 +5,7 @@
 	$dataBase->selectTable('space');
 	$dataBase->json();
 	
-	function getName() {			//TODO: wtf...
+	function getName() {
 		$db = $GLOBALS['dataBase'];
 		$result = $db->selectAny('name', 'space', 'venue_id', 1);
 		$a = $db->resultArray();
@@ -14,15 +14,27 @@
 	}
 	
 	function getNeighbourhood() {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->selectAny('neighbourhood', 'space', 'venue_id', 1);
+		$a = $db->resultArray();
 		
+		echo $a[0]['name'];
 	}
 	
 	function getAddress() {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->selectAny('address', 'space', 'venue_id', 1);
+		$a = $db->resultArray();
 		
+		echo $a[0]['name'];
 	}
 	
 	function getAbout() {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->selectAny('description', 'space', 'venue_id', 1);
+		$a = $db->resultArray();
 		
+		echo $a[0]['name'];
 	}
 	
 	/**

@@ -16,7 +16,7 @@
 	<div class="footer-text">
 		<hr>
 		<p>
-			<span class="pull-left">&copy; 2016 AnySpace Inc.</span><span class="pull-right"><a href="#">Learn More</a> <a href="#">Share Your Space</a></span>
+			<span class="pull-left">&copy; <?php echo date("Y"); ?> AnySpace Inc.</span><span class="pull-right"><a href="#">Learn More</a> <a href="#">Share Your Space</a></span>
 		</p>
 	</div>
 </footer>
