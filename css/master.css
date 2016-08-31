@@ -391,4 +391,16 @@ button.contact-venue {
 
 .customselect {
 	width: 100%;
+    border: 1px solid gray;
+    border-radius: 0px;
+    outline: none;
+    margin: .4em .2em .4em .2em;
+    width: 9em;
+}
+.customselect .csbox, .customselect .cslist {
+    background: #fff !important;
+}
+.customselect .cslist {
+	padding-left: 0 !important;
+	border: 1px solid gray;
 }
