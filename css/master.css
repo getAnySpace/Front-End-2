@@ -552,4 +552,15 @@ a.list-inactive {
   margin-top: 0px;
 }
 
+.customselect .cslist li {
+	line-height: 30px;
+}
+.customselect .cslist li:hover, .customselect .cslist li.selected {
+  color: #fff !important;
+  background: #514ca9 !important;
+}
 
+
+.payment .venue-box {
+	margin-top: 6em;
+}

@@ -19,12 +19,13 @@
 .customselect .csbox:after {
   position: absolute;
   content: ' ';
-  background: url('../images/dropdown-arrow.png');
+  background: url('../img/select-arrow.png');
   width: 21px;
   height: 8px;
   right: 10px;
   top: 50%;
   margin-top: -4px;
+  background-size: cover;
 }
 .customselect.is-disabled .csbox {
   color: #c3c5c7;
