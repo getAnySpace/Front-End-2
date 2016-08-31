@@ -425,6 +425,10 @@ a {
   color: #fff;
 }
 
+.dropdown {
+  z-index:1;
+  position: relative;
+}
 .dropdown dd,
 .dropdown dt {
   margin: 0px;
@@ -559,7 +563,6 @@ a.list-inactive {
   color: #fff !important;
   background: #514ca9 !important;
 }
-
 
 .payment .venue-box {
 	margin-top: 6em;
