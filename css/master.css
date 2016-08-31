@@ -655,3 +655,15 @@ a.list-inactive {
 .payment-venue-rules label {
   font-size: 1.2em; 
 }
+
+.result-item .col-md-2.col-md-offset-3 {
+    height: 250px;
+    overflow: hidden;
+}
+.result-item .col-md-2.col-md-offset-3 img {
+	height: inherit;
+	width: auto;
+}
+.result-item .col-md-4 {
+    padding-left: 30px;
+}
