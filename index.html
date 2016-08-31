@@ -75,18 +75,18 @@
         </div>
 
 <div id="search">
-    <form method="get">
-        <input type="text" placeholder="Location"/>
-        <input type="text" class="datetimepicker" placeholder="Start time"/>
-        <input type="text" class ="datetimepicker" placeholder="End time"/>
+    <form method="get" action="results">
+        <input type="text" placeholder="Location" name="location"/>
+        <input type="text" class="datetimepicker" placeholder="Start time" name="start"/>
+        <input type="text" class ="datetimepicker" placeholder="End time" name="end"/>
         <select>
             <option disabled selected>Capacity</option>
-            <option>1-10</option>
-            <option>11-30</option>
-            <option>31-50</option>
-            <option>51-70</option>
-            <option>71-100</option>
-            <option>100+</option>
+            <option name="capacity" value="1">1-10</option>
+            <option name="capacity" value="2">11-30</option>
+            <option name="capacity" value="3">31-50</option>
+            <option name="capacity" value="4">51-70</option>
+            <option name="capacity" value="5">71-100</option>
+            <option name="capacity" value="6">100+</option>
         </select>
         <input type="submit" value="Search"/>
     </form>

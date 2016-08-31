@@ -1,3 +1,13 @@
+<?php
+	include 'functions.php';
+	
+	$venue_id;
+	
+	if (isset($_GET['venue_id'])) {
+		$venue_id = $_GET['venue_id'];
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,7 +61,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><img src = "../img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
+              <a class="navbar-brand" href="../index.html"><img src = "../img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
@@ -63,10 +73,10 @@
         </nav>
         <div id="search">
             <form method="get">
-                <input type="text" placeholder="Location"/>
-                <input type="text" class="datetimepicker" placeholder="Start time"/>
-                <input type="text" class ="datetimepicker" placeholder="End time"/>
-                <select>
+                <input type="text" placeholder="Location" value="<?php if (isset($_GET['location'])) { echo $_GET['location'];} ?>"/>
+                <input type="text" class="datetimepicker" placeholder="Start time" value="<?php if (isset($_GET['start'])) { echo $_GET['start'];} ?>"/>
+                <input type="text" class ="datetimepicker" placeholder="End time" value="<?php if (isset($_GET['end'])) { echo $_GET['end'];} ?>"/>
+                <select value="<?php if (isset($_GET['capacity'])) { echo $_GET['capacity'];} ?>">
                     <option disabled selected>Capacity</option>
                     <option>1-10</option>
                     <option>11-30</option>
@@ -85,47 +95,39 @@
           <div class="col-md-12" id="search-refine"> 
             <form method="get">
               <div class="col-md-3 col-md-offset-3">
-                <dl class="dropdown"> 
+                <dl class="dropdown dropdown-amenities"> 
                     <dt>
                     <a href="#">
-                      <span class="hida">AMENITIES</span>
-                      <p class="multiSel"></p>
+                      <span class="hida hida-amenities">AMENITIES</span>
+                      <p class="multiSel-amenities multiSel"></p>
                     </a>
                     </dt>
                   
                     <dd>
-                        <div class="mutliSelect">
+                        <div class="mutliSelect-amenities multiSelect">
                             <ul>
-                                <li><input type="checkbox" value="Apple" />Apple</li>
-                                <li><input type="checkbox" value="Blackberry" />Blackberry</li>
-                                <li><input type="checkbox" value="HTC" />HTC</li>
-                                <li><input type="checkbox" value="Sony Ericson" />Sony Ericson</li>
-                                <li><input type="checkbox" value="Motorola" />Motorola</li>
-                                <li><input type="checkbox" value="Nokia" />Nokia</li>
+                                <?php getAmenities(); ?>
                             </ul>
                         </div>
                     </dd>
                 </dl>
               </div>
               <div class="col-md-3">
-                <dl class="dropdown"> 
+                <dl class="dropdown dropdown-style"> 
                     <dt>
                     <a href="#">
-                      <span class="hida">STYLE</span>
-                      <p class="multiSel"></p>
+                      <span class="hida hida-style">STYLE</span>
+                      <p class="multiSel-style multiSel"></p>
                     </a>
                     </dt>
                   
                     <dd>
-                        <div class="mutliSelect">
+                        <div class="multiSelect-style mutliSelect">
                             <ul>
-                                <li><input type="checkbox" value="Apple" />Apple</li>
-                                <li><input type="checkbox" value="Blackberry" />Blackberry</li>
-                                <li><input type="checkbox" value="HTC" />HTC</li>
-                                <li><input type="checkbox" value="Sony Ericson" />Sony Ericson</li>
-                                <li><input type="checkbox" value="Motorola" />Motorola</li>
-                                <li><input type="checkbox" value="Nokia" />Nokia</li>
-                                <li> <input type="checkbox" value="Apple" />Apple</li>
+                                <li><input type="checkbox" value="Modern" /> Modern</li>
+                                <li><input type="checkbox" value="Vintage" /> Vintage</li>
+                                <li><input type="checkbox" value="Luxury" /> Luxury</li>
+                                <li><input type="checkbox" value="Luxury" /> Standard</li>
                             </ul>
                         </div>
                     </dd>
@@ -151,25 +153,25 @@
             </div>
             <div class="col-md-12 result-item">
               <div class="col-md-2 col-md-offset-3">
-                <img src="https://placehold.it/250x250">
+                <img src="<?php echo getBackground(); ?>"/>
               </div>    
               <div class="col-md-4">
-                <h1>RIVER FOREST CIVIC CENTER</h1>
-                <h2>CHICAGO | CIVIC CENTER</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed ultrices quam. Duis consequat nisi mollis, molestie ligula eu, consequat leo. Nunc bibendum metus ut libero egestas, eget tristique mi vulputate. Integer non volutpat velit, vitae ornare magna. Duis sit amet arcu id dui placerat malesuada id ut tellus. Nam quis commodo libero.</p>
-                <h2>Oak  Forest</h2>
+                <h1><?php getName(); ?></h1>
+                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h1>
+                <p><?php getAbout(); ?></p>
+                <h2><?php getNeighbourhood(); ?></h2>
               </div>
             </div>
             
             <div class="col-md-12 result-item">
               <div class="col-md-2 col-md-offset-3">
-                <img src="https://placehold.it/250x250">
+                <img src="<?php echo getBackground(); ?>"/>
               </div>    
               <div class="col-md-4">
-                <h1>RIVER FOREST CIVIC CENTER</h1>
-                <h2>CHICAGO | CIVIC CENTER</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed ultrices quam. Duis consequat nisi mollis, molestie ligula eu, consequat leo. Nunc bibendum metus ut libero egestas, eget tristique mi vulputate. Integer non volutpat velit, vitae ornare magna. Duis sit amet arcu id dui placerat malesuada id ut tellus. Nam quis commodo libero.</p>
-                <h2>Oak  Forest</h2>
+                <h1><?php getName(); ?></h1>
+                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h1>
+                <p><?php getAbout(); ?></p>
+                <h2><?php getNeighbourhood(); ?></h2>
               </div>
             </div>
           </div>
@@ -202,6 +204,8 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/af.js"></script>
+	<link rel="stylesheet" type="text/css" href="../plugins/datetimepicker-master/jquery.datetimepicker.css"/ >
+	<script src="../plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 	<!--<script src="../js/customSelect.js"></script>-->
     <script>
         jQuery('.datetimepicker').datetimepicker({
