@@ -45,12 +45,12 @@
 						<?php getPhotos(); ?>
 					<ul>
 					<p>
-						<img src="https://maps.googleapis.com/maps/api/staticmap?center=" + <?php getAddress(); ?> + 
-            			"&zoom=13
+						<img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php urlencode(getAddress()); ?> 
+            			&zoom=13
             			&size=600x300
             			&maptype=roadmap
-						&markers=color:purple%7Clabel:AS%7C" + <?php getAddress(); ?> + 
-            			"&key=AIzaSyCmeN8Mu9qlrwSCNLGUdjw5R0Gex6tr9Qg"/>
+						&markers=color:purple%7Clabel:AS%7C<?php urlencode(getAddress()); ?>
+            			&key=AIzaSyCmeN8Mu9qlrwSCNLGUdjw5R0Gex6tr9Qg"/>
 					</p>
 				</div>
 				<div class="venue-block venue-rules">
@@ -78,7 +78,12 @@
 
 			<div class="col-md-2 venue-box">
 				<div>
-					<p>		//TODO: fill
+					<select>
+						<option>Select an Option</option>
+						<option>one</option>
+						<option>two</option>
+					</select>
+					<p>		<!--TODO: fill-->
 						Lorem ipsum dolor sit amet, consectetur adipiscing elite. Vestibulum fringilla ornare risus non maximus. Vivamus ut venenatis dui.Sed cursus lacus venenatis dictum ullamcorper. Duis pharetra urna               vitae scelerisque tempus. Phasellus aliquam, nisi et faucibus consectetur, arcu justo efficitur ante, quis posuere nibh augue vel ante. Sed feugiat pellentesque turpis eu hendrerit. Suspendisse finibus            metus ut nisi vestibulum placerat. Donec eget elementum quam. Morbi varius velit quam, quis convallis justo scelerisque non.
 					</p>
 				</div>

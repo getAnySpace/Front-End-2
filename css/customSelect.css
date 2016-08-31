@@ -1,0 +1,58 @@
+.customselect {
+  display: inline-block;
+  position: relative;
+}
+.customselect .csbox {
+  background: #f1f1f2;
+  height: 2.85714em;
+  line-height: 2.85714em;
+  padding: 0 38px 0 8px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  color: #646769;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.customselect .csbox:after {
+  position: absolute;
+  content: ' ';
+  background: url('../images/dropdown-arrow.png');
+  width: 21px;
+  height: 8px;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+}
+.customselect.is-disabled .csbox {
+  color: #c3c5c7;
+  cursor: default;
+}
+.customselect.large-list .cslist {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.customselect .cslist {
+  list-style: none;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  background: #f1f1f2;
+  color: #6c6d6f;
+  min-width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+.customselect .cslist li {
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+.customselect .cslist li:first-child {
+  display: none;
+}
+.customselect .cslist li:hover, .customselect .cslist li.selected {
+  color: #f1f1f2;
+  background: #6c6d6f;
+}

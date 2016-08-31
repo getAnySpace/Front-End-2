@@ -1,6 +1,11 @@
 <?php
 	include 'functions.php';
-	//init();
+	
+	$venue_id;
+	
+	if (isset($_GET['venue_id'])) {
+		$venue_id = $_GET['venue_id'];
+	}
 ?>
 
 <!DOCTYPE html>
@@ -13,8 +18,8 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title><?php //getName(); ?> | AnySpace</title>
-		<link rel="shortcut icon" href="images/icon.png">
+		<title><?php getName(); ?> | AnySpace</title>
+		<link rel="shortcut icon" href="../img/icon.png">
 
 		<!-- Bootstrap core CSS -->
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -37,6 +42,7 @@
 		<!-- Custom styles for this template -->
 		<link href="../css/carousel.css" rel="stylesheet">
 		<link href="../css/master.css" rel="stylesheet">
+		<link href="../css/customSelect.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 		<script src="../js/script.js"></script>
 		<script src="../js/browsers.js"></script>
@@ -45,6 +51,7 @@
 	<!-- NAVBAR
 	================================================== -->
 	<body class="venue-page">
+		<?php echo '<style> .venue-cover { background-image: url("' . getBackground() . '"); } </style>'; ?>
 		<div class="navbar-wrapper">
 			<div class="container">
 				<nav class="navbar navbar-inverse navbar-static-top">
@@ -56,7 +63,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="index.html"><img src = "../img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
+							<a class="navbar-brand" href="../index.html"><img src = "../img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
