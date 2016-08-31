@@ -404,3 +404,15 @@ button.contact-venue {
 	padding-left: 0 !important;
 	border: 1px solid gray;
 }
+.customselect .cslist li {
+	line-height: 30px;
+}
+.customselect .cslist li:hover, .customselect .cslist li.selected {
+  color: #fff !important;
+  background: #514ca9 !important;
+}
+
+
+.payment .venue-box {
+	margin-top: 6em;
+}

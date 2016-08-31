@@ -1,5 +1,5 @@
 <?php
-	include "header.php";
+include "header.php";
 ?>
 
 <div class="container content container-fluid">
@@ -78,21 +78,96 @@
 
 			<div class="col-md-2 venue-box">
 				<div>
-					<select>
-						<option>Select an Option</option>
-						<option>one</option>
-						<option>two</option>
-					</select>
-					<p>		<!--TODO: fill-->
-						Lorem ipsum dolor sit amet, consectetur adipiscing elite. Vestibulum fringilla ornare risus non maximus. Vivamus ut venenatis dui.Sed cursus lacus venenatis dictum ullamcorper. Duis pharetra urna               vitae scelerisque tempus. Phasellus aliquam, nisi et faucibus consectetur, arcu justo efficitur ante, quis posuere nibh augue vel ante. Sed feugiat pellentesque turpis eu hendrerit. Suspendisse finibus            metus ut nisi vestibulum placerat. Donec eget elementum quam. Morbi varius velit quam, quis convallis justo scelerisque non.
-					</p>
+					<div class="venue-box-top">
+			              <p class="venue-price">$30</p>
+			              <p class="rate-unit">PER PERSON</p>
+			              <div style="clear: both;"></div>
+			          </div>
+			          <form method="get">
+			            <div class="venue-options">
+			              <div>
+			                <select>
+			                  <option disabled selected>PURPOSE</option>
+			                  <option>Meeting</option>
+			                  <option>Party</option>
+			                </select>
+			                <select>
+			                  <option disabled selected>CAPACITY</option>
+			                  <option>1-10</option>
+			                  <option>11-30</option>
+			                  <option>31-50</option>
+			                  <option>51-70</option>
+			                  <option>71-100</option>
+			                  <option>100+</option>
+			                </select>
+			              </div>
+			
+			              <div>
+			                <select>
+			                  <option disabled selected>START TIME</option>
+			                  <option>Meeting</option>
+			                  <option>Party</option>
+			                </select>
+			                <select>
+			                  <option disabled selected>END TIME</option>
+			                  <option>1-10</option>
+			                  <option>11-30</option>
+			                  <option>31-50</option>
+			                  <option>51-70</option>
+			                  <option>71-100</option>
+			                  <option>100+</option>
+			                </select>
+			              </div>
+			
+			              <div>
+			                <select>
+			                  <option disabled selected>FOOD</option>
+			                  <option>Meeting</option>
+			                  <option>Party</option>
+			                </select>
+			                <select>
+			                  <option disabled selected>DRINK</option>
+			                  <option>1-10</option>
+			                  <option>11-30</option>
+			                  <option>31-50</option>
+			                  <option>51-70</option>
+			                  <option>71-100</option>
+			                  <option>100+</option>
+			                </select>
+			              </div>
+			            </div>
+			            <div class="venue-actions">
+			              <button class="book-now">BOOK NOW</button>
+			              <button class="contact-venue">CONTACT VENUE</button>
+            			</div>
+          			</form>
 				</div>
 			</div>
 		</div>
 	</div>
 
 </div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script>
+	var geocoder = new google.maps.Geocoder();
+	var location =
+ <?php getAddress(); ?>
+	;
+	geocoder.geocode({
+		addredd : location
+	}, function(results, status) {
+		if (status === 'OK') {
+			for (var i = 0; i < results.length; i++) {
+				if (results[i].types.indexOf('neighborhood') != -1) {
+					console.log(results[i].formatted_address);
+				}
+			}
+		}
+	});
+</script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmeN8Mu9qlrwSCNLGUdjw5R0Gex6tr9Qg"></script>
 
 <?php
-	include "footer.php";
+include "footer.php";
 ?>
