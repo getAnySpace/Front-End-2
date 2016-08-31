@@ -1,3 +1,7 @@
+/**
+ * @author: Patrick Bartman 
+ */
+
 var customselect = {
 	SLIDE_SPEED: 250,
 	KEY_UP: 38,

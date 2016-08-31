@@ -42,6 +42,7 @@
 		<!-- Custom styles for this template -->
 		<link href="../css/carousel.css" rel="stylesheet">
 		<link href="../css/master.css" rel="stylesheet">
+		<link href="../css/customSelect.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
 		<script src="../js/script.js"></script>
 		<script src="../js/browsers.js"></script>
