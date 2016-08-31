@@ -475,7 +475,7 @@ a {
   display: none;
   left: 0px;
   padding: 2px 0px 2px 5px;
-  position: absolute;
+  position: static;
   top: 2px;
   width: 100%;
   list-style: none;
@@ -564,6 +564,57 @@ a.list-inactive {
   background: #514ca9 !important;
 }
 
+.billing-info > .customselect {
+	width: 100%;
+}
+.billing-info > div .customselect {
+	width: 100px;
+}
+
 .payment .venue-box {
 	margin-top: 6em;
+}
+
+
+#bi > h1, #pi > h1 {
+	color: #5A5A5A;
+	margin-left: 40px;
+}
+#bi, #pi {
+	text-decoration: none
+}
+#bi:before, #pi:before {
+	position: absolute;
+	content: ' ';
+	background: url('../img/select-arrow.png');
+	width: 21px;
+	height: 10px;
+	left: 10px;
+	/*top: 50%;*/
+	margin-top: 34px;
+	background-size: cover;
+}
+
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+
+.payment .venue-detail {
+	padding-bottom: 12em;
+	
+}
+.payment .col-md-12 {
+	padding-left: 0;
+}
+
+
+.payment button.contact-venue {
+	color: gray;
 }

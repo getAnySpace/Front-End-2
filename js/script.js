@@ -24,3 +24,14 @@ $(window).scroll(function (event) {
     	jQuery(".col-md-2.venue-box > *").removeClass("fix");
     }
 });
+
+
+function hide(element) {
+	var e = jQuery(element).next();
+	if (e.is(':visible')) {
+		e.slideUp();
+	}
+	else {
+		e.slideDown();
+	}
+}
