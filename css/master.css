@@ -408,6 +408,10 @@ button.contact-venue {
     margin: .4em .2em .4em .2em;
     width: 9em;
 }
+
+.billing-info .customselect {
+  margin: 0 0 1.4em 0;
+}
 .customselect .csbox, .customselect .cslist {
     background: #fff !important;
 }
@@ -496,7 +500,7 @@ a {
   background-color: #fff;
 }
 
-button {
+.dropdown button {
   background-color: #514ca9;
   width: 100%;
   border-radius: 5px;
@@ -568,7 +572,14 @@ a.list-inactive {
 	width: 100%;
 }
 .billing-info > div .customselect {
-	width: 100px;
+	width: 300px;
+}
+
+.clear input {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  width: 300px;
+
 }
 
 .payment .venue-box {
@@ -576,14 +587,14 @@ a.list-inactive {
 }
 
 
-#bi > h1, #pi > h1 {
+#bi > h1, #pi > h1, #vr > h1 {
 	color: #5A5A5A;
 	margin-left: 40px;
 }
-#bi, #pi {
+#bi, #pi, #vr {
 	text-decoration: none
 }
-#bi:before, #pi:before {
+#bi:before, #pi:before, #vr:before {
 	position: absolute;
 	content: ' ';
 	background: url('../img/select-arrow.png');
@@ -617,4 +628,30 @@ a.list-inactive {
 
 .payment button.contact-venue {
 	color: gray;
+}
+
+.payment-detail {
+  padding-right: 4em;
+}
+
+.payment-venue-rules .col-md-1 {
+  padding-left: 0px;
+}
+
+.legal-disclaimer textarea {
+  width: 100%;
+  height: 200px;
+}
+
+.legal-disclaimer h3 {
+  padding-top: 0;
+}
+
+.legal-disclaimer {
+  padding-top: 5em;
+  padding-bottom: 3em;
+}
+
+.payment-venue-rules label {
+  font-size: 1.2em; 
 }
