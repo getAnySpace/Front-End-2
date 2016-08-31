@@ -78,7 +78,12 @@
 
 			<div class="col-md-2 venue-box">
 				<div>
-					<p>		//TODO: fill
+					<select>
+						<option>Select an Option</option>
+						<option>one</option>
+						<option>two</option>
+					</select>
+					<p>		<!--TODO: fill-->
 						Lorem ipsum dolor sit amet, consectetur adipiscing elite. Vestibulum fringilla ornare risus non maximus. Vivamus ut venenatis dui.Sed cursus lacus venenatis dictum ullamcorper. Duis pharetra urna               vitae scelerisque tempus. Phasellus aliquam, nisi et faucibus consectetur, arcu justo efficitur ante, quis posuere nibh augue vel ante. Sed feugiat pellentesque turpis eu hendrerit. Suspendisse finibus            metus ut nisi vestibulum placerat. Donec eget elementum quam. Morbi varius velit quam, quis convallis justo scelerisque non.
 					</p>
 				</div>
