@@ -40,6 +40,17 @@
 		<!-- PLUGINS -->
 		<link rel="stylesheet" type="text/css" href="plugins/datetimepicker-master/jquery.datetimepicker.css"/ >
 		<script src="plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-83550714-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
 	</head>
 	<!-- NAVBAR
 	================================================== -->
@@ -61,10 +72,10 @@
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">
 								<li class="">
-									<a href="#">Learn More</a>
+									<a href="#" id="lm">Learn More</a>
 								</li>
 								<li>
-									<a href="#">Contact</a>
+									<a href="#" id="contact">Contact</a>
 								</li>
 							</ul>
 						</div>
@@ -247,7 +258,7 @@
 								</div>
 								<div class="venue-box-top">
 									<p class="venue-price">
-										$900 (30PPL)
+										$900 (30<span class="glyphicons glyphicons-user"></span>)
 									</p>
 									<p class="rate-unit">
 										TOTAL
@@ -307,7 +318,7 @@
 									</div>
 								</div>
 								<div class="venue-actions">
-									<button class="book-now">
+									<button class="book-now" is="book-now">
 										CONFIRM PAYMENT
 									</button>
 									<button class="contact-venue">

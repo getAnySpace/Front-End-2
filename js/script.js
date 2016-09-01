@@ -29,9 +29,16 @@ $(window).scroll(function (event) {
 function hide(element) {
 	var e = jQuery(element).next();
 	if (e.is(':visible')) {
-		e.slideUp();
+		e.stop().slideUp();
 	}
 	else {
-		e.slideDown();
+		e.stop().slideDown();
 	}
 }
+
+
+jQuery("*").click(function(event) {
+	var t = jQuery(this);
+	console.log(event.target.id);
+	console.log(t.attr('id'));
+});

@@ -584,8 +584,11 @@ a.list-inactive {
 
 .payment .venue-box {
 	margin-top: 6em;
+	margin-left: 4em;
 }
-
+.venue-box {
+	margin-left: 4em;
+}
 
 #bi > h1, #pi > h1, #vr > h1 {
 	color: #5A5A5A;
@@ -666,4 +669,8 @@ a.list-inactive {
 }
 .result-item .col-md-4 {
     padding-left: 30px;
+}
+
+.glyphicons {
+	line-height: 1.75;
 }
