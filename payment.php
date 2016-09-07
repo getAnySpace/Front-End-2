@@ -92,7 +92,7 @@
 									<h1>PUZZLE'S BAR</h1>
             						<h2>PAYMENT CONFIRMATION</h2>
 								</div>
-								<a href="#" id="bi" onclick='hide("#bi")'><h1>BILLING INFO</h1></a>
+								<a id="bi" onclick='hide("#bi")'><h1>BILLING INFO</h1></a>
 								<div class="venue-block billing-info">
 									<select>
 										<option>NEW ADDRESS</option>
@@ -196,7 +196,7 @@
 									</div>
 									<div class="clear"></div>
 								</div>
-								<a href="#" id="pi" onclick='hide("#pi")'><h1>PAYMENT INFO</h1></a>
+								<a id="pi" onclick='hide("#pi")'><h1>PAYMENT INFO</h1></a>
 								<div class="venue-block payment-info">
 									<div class="clear">
 										<label class="left">CARD NUMBER</label>
@@ -212,6 +212,7 @@
 									</div>
 									<div class="clear"></div>
 								</div>
+								<a id="vi" onclick='hide("#vi")'><h1>VENUE INFO</h1></a>
 								<div class="venue-block payment-venue-rules">
 									<div>
 										<h3>Cancellation Policy</h3>
@@ -232,7 +233,7 @@
 										</div>
 										<div>
 											<h3>Legal Disclaimer</h3>
-											<textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+											<textarea contenteditable="false" spellcheck="false" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
 										</div>
 										<div>
 											<input type="checkbox" />
@@ -240,10 +241,6 @@
 										</div>
 									</div>
 								</div>
-								<div class="venue-block venue-rules">
-									
-								</div>
-								<div class="venue-block venue-policy"></div>
 							</div>
 
 							<div class="col-md-2 venue-box">

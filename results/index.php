@@ -162,25 +162,33 @@
             </div>
             <div class="col-md-12 result-item">
               <div class="col-md-2 col-md-offset-3">
-                <img src="<?php echo getBackground(); ?>"/>
+              	<a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
+                	<img src="<?php echo getBackground(); ?>"/>
+               </a>
               </div>    
               <div class="col-md-4">
-                <h1><?php getName(); ?></h1>
-                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h1>
-                <p><?php getAbout(); ?></p>
-                <h2><?php getNeighbourhood(); ?></h2>
+             	<a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
+	                <h1><?php getName(); ?></h1>
+	                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h2>
+	                <p><?php getAbout(); ?></p>
+	                <h2><?php getNeighbourhood(); ?></h2>
+	          	</a>
               </div>
             </div>
             
             <div class="col-md-12 result-item">
               <div class="col-md-2 col-md-offset-3">
-                <img src="<?php echo getBackground(); ?>"/>
+              	<a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
+                	<img src="<?php echo getBackground(); ?>"/>
+                </a>
               </div>    
               <div class="col-md-4">
-                <h1><?php getName(); ?></h1>
-                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h1>
-                <p><?php getAbout(); ?></p>
-                <h2><?php getNeighbourhood(); ?></h2>
+                <a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
+	                <h1><?php getName(); ?></h1>
+	                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h2>
+	                <p><?php getAbout(); ?></p>
+	                <h2><?php getNeighbourhood(); ?></h2>
+	          	</a>
               </div>
             </div>
           </div>

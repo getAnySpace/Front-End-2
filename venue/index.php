@@ -69,7 +69,7 @@ include "header.php";
 					</div>
 				</div>
 				<div class="venue-block venue-policy">
-					<h3>CANCELLATION POLICY & SECURITY DEPOSIT</h3>
+					<h3>CANCELLATION POLICY &amp; SECURITY DEPOSIT</h3>
 					<ul class="policy">
 						<?php getPolicies(); ?>
 					</ul>
@@ -83,7 +83,7 @@ include "header.php";
 			              <p class="rate-unit">PER PERSON</p>
 			              <div style="clear: both;"></div>
 			          </div>
-			          <form method="get">
+			          <form method="get" action="../payment.php">
 			            <div class="venue-options">
 			              <div>
 			                <select>
@@ -147,26 +147,6 @@ include "header.php";
 	</div>
 
 </div>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script>
-	var geocoder = new google.maps.Geocoder();
-	var location =
- <?php getAddress(); ?>
-	;
-	geocoder.geocode({
-		addredd : location
-	}, function(results, status) {
-		if (status === 'OK') {
-			for (var i = 0; i < results.length; i++) {
-				if (results[i].types.indexOf('neighborhood') != -1) {
-					console.log(results[i].formatted_address);
-				}
-			}
-		}
-	});
-</script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmeN8Mu9qlrwSCNLGUdjw5R0Gex6tr9Qg"></script>
 
 <?php
 include "footer.php";

@@ -13,16 +13,12 @@
 		echo $a[0]['name'];
 	}
 	
-	function getNeighbourhood() {		//TODO: add column to database or use google api
-		/*$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('neighbourhood', 'space', 'venue_id', 1);
+	function getNeighbourhood() {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->selectAny('neighbourhood', 'venue', 'id', 1);
 		$a = $db->resultArray();
 		
-		echo $a[0]['name'];*/
-		
-		//"https://maps.googleapis.com/maps/api/geocode/json?address=" . urlencode(getAddress()) . "&key=AIzaSyCmeN8Mu9qlrwSCNLGUdjw5R0Gex6tr9Qg")
-		
-		echo "*NEIGHBOURHOOD*";
+		echo $a[0]['neighbourhood'];
 	}
 	
 	function getAddress() {

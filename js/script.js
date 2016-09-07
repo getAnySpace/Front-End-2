@@ -30,10 +30,14 @@ function hide(element) {
 	var e = jQuery(element).next();
 	if (e.is(':visible')) {
 		e.stop().slideUp();
+		jQuery(element).addClass('up');
 	}
 	else {
 		e.stop().slideDown();
+		jQuery(element).removeClass('up');
 	}
+	
+	return false;
 }
 
 
