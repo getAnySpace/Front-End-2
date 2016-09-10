@@ -82,34 +82,45 @@
 				</nav>
 			</div>
 			<div class="container content container-fluid">
-				<form method="get">
 					<div class="row-fluid">
 						<div class="col-md-12">
-							<div class="col-md-6 col-md-offset-3 venue-detail payment-detail">
-								<div class="venue-block venue-description">
-                                    <p>PRINT INVOICE</p>
+							<div class="col-md-6 col-md-offset-3 venue-detail">
+								<div class="venue-block venue-description venue-confirmation">
+                                    <p class="print-invoice"><a  href="#">PRINT INVOICE</a></p>
 									<h1>THANK YOU FOR YOUR PAYMENT.</h1>
                                     <p>We received your payment for your event at PUZZLE'S BAR. You will receive an email confirmation event within 24 hours. Lorem ipsum Lorem ipsum.</p>
 								</div>
-                                <div class="col-md-12">
+                                <div class="col-md-12 confirmation-details">
                                   <div class="col-md-6">
-                                    <p>Billed To</p>
+                                    <p style="font-weight: bold;">Billed To</p>
                                     <p>John Smith</p>
                                     <p>123 Anystreet Avenue</p>
                                     <p>Town, State ZIP CODE</p>
                                   </div>
                                   <div class="col-md-6">
-                                    <p>Order Details</p>
+                                    <p style="font-weight: bold;">Order Details</p>
                                     <p>Puzzle's Bar</p>
                                     <p>4:00pm-2:00am</p>
                                     <p>Guests: 45-55</p>
-                                    <p>Food: Tier 1</p>
+                                    <p>Food: Tier 420</p>
                                     <p>Drink: None</p>
-                                    <p>Total payment today: $300.00</p>
+                                    <p style="font-weight: bold;">Payment: $300.00</p>
                                   </div>
                                 </div>
+                                <div class="col-md-12">
+                                  <form id="confirmation">
+                                    <div class="col-md-4">
+                                      <input type="submit" value="Modify Request">
+                                    </div> 
+                                    <div class="col-md-4">
+                                      <input type="submit" value="Cancel Request">
+                                    </div>
+                                    <div class="col-md-4">
+                                      <input type="submit" value="Contact Host">
+                                    </div> 
+                                  </form>
+                                </div>
 							</div>
-				</form>
 				<footer class="landing-footer">
 					<ul>
 						<li>

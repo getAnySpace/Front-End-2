@@ -283,6 +283,23 @@ button.contact-venue {
   outline: none;
 }         
 
+#confirmation {
+  text-align: center;
+  padding-top: 2em;
+}
+
+#confirmation input {
+  text-align: center;
+  background-color: #444;
+  color: white;
+  height: 3em; 
+  padding: 0 1em 0 1em;
+  margin: 4px 4px 4px 4px;
+  border: none;
+  text-transform: uppercase; 
+  outline: none;
+}
+
 #search input[type="text"]:nth-of-type(1){
     width: 200px;
 }
@@ -425,7 +442,7 @@ button.contact-venue {
 */
 
 
-a {
+.dropdown a {
   color: #fff;
 }
 
@@ -590,15 +607,15 @@ a.list-inactive {
 	margin-left: 4em;
 }
 
-#bi > h1, #pi > h1, #vi > h1 {
+#bi > h1, #pi > h1, #vr > h1 {
 	color: #5A5A5A;
 	margin-left: 40px;
 }
-#bi, #pi, #vi {
+#bi, #pi, #vr {
 	text-decoration: none;
 	cursor: pointer;
 }
-#bi:before, #pi:before, #vi:before {
+#bi:before, #pi:before, #vr:before {
 	position: absolute;
 	content: ' ';
 	background: url('../img/select-arrow.png');
@@ -609,15 +626,13 @@ a.list-inactive {
 	margin-top: 34px;
 	background-size: cover;
 }
-#bi.up:before, #pi.up:before, #vi.up:before {
+#bi.up:before, #pi.up:before, #vr.up:before {
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
-
-
 
 .left {
 	float: left;
@@ -702,4 +717,16 @@ a.list-inactive {
 
 .clear input[type="text"] {
     padding: .5em;
+}
+
+.print-invoice {
+  text-align: right;
+}
+
+.venue-confirmation {
+  padding-top: 2em;
+}
+
+.confirmation-details {
+  padding-top: 2em;
 }
