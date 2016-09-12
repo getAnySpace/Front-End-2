@@ -283,20 +283,8 @@
 									</div>
 
 									<div>
-										<select>
-											<option disabled selected>START TIME</option>
-											<option>Meeting</option>
-											<option>Party</option>
-										</select>
-										<select>
-											<option disabled selected>END TIME</option>
-											<option>1-10</option>
-											<option>11-30</option>
-											<option>31-50</option>
-											<option>51-70</option>
-											<option>71-100</option>
-											<option>100+</option>
-										</select>
+										<input type="text" class="datetimepicker" placeholder="Start time" value="">
+			                			<input type="text" class="datetimepicker" placeholder="End time" value="">
 									</div>
 
 									<div>

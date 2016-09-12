@@ -33,6 +33,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/locale/af.js"></script>
 
 <script src="../js/customSelect.js"></script>
+<script src="../plugins/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
 <script>
 	jQuery('.datetimepicker').datetimepicker({
 		minDate : '0',

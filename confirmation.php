@@ -1,22 +1,22 @@
 <?php
 	require 'lib/Stripe.php';
 	
-	$company;
-	$first;
-	$last;
-	$email;
-	$address1;
-	$address2;
-	$city;
-	$state;
-	$zip;
-	$phone;
-	$venue;
-	$time;
-	$guests;
-	$food;
-	$drink;
-	$price;
+	$company="company";
+	$first="first";
+	$last="last";
+	$email="email";
+	$address1="address 1";
+	$address2="address 2";
+	$city="city";
+	$state="state";
+	$zip="zip";
+	$phone="phone";
+	$venue="venue";
+	$time="time";
+	$guests="guests";
+	$food="food";
+	$drink="drink";
+	$price="price";
 	
 	if ($_POST) {
 		
@@ -179,25 +179,25 @@
 						<div class="col-md-12">
 							<div class="col-md-6 col-md-offset-3 venue-detail">
 								<div class="venue-block venue-description venue-confirmation">
-                                    <p class="print-invoice"><a  href="" onclick="window.print();">PRINT INVOICE</a></p>
+                                    <p class="print-invoice"><a  href="" onclick="window.print(); return false;">PRINT INVOICE</a></p>
 									<h1>THANK YOU FOR YOUR PAYMENT.</h1>
-                                    <p>We received your payment for your event at PUZZLE'S BAR. You will receive an email confirmation event within 24 hours. Lorem ipsum Lorem ipsum.</p>
+                                    <p>We received your payment for your event at <?php echo $venue; ?>. You will receive an email confirmation event within 24 hours. Lorem ipsum Lorem ipsum.</p>
 								</div>
                                 <div class="col-md-12 confirmation-details">
                                   <div class="col-md-6">
                                     <p style="font-weight: bold;">Billed To</p>
-                                    <p>John Smith</p>
-                                    <p>123 Anystreet Avenue</p>
-                                    <p>Town, State ZIP CODE</p>
+                                    <p><?php echo ($first . " " . $last); ?></p>
+                                    <p><?php echo ($address1 . "<br>" . $address2); ?></p>
+                                    <p><?php echo ($city . ", " . $state . " " . $zip); ?></p>
                                   </div>
                                   <div class="col-md-6">
                                     <p style="font-weight: bold;">Order Details</p>
-                                    <p>Puzzle's Bar</p>
-                                    <p>4:00pm-2:00am</p>
-                                    <p>Guests: 45-55</p>
-                                    <p>Food: Tier 420</p>
-                                    <p>Drink: None</p>
-                                    <p style="font-weight: bold;">Payment: $300.00</p>
+                                    <p><?php echo $venue; ?></p>
+                                    <p><?php echo $time; ?></p>
+                                    <p>Guests: <?php echo $guests; ?></p>
+                                    <p>Food: <?php echo $food; ?></p>
+                                    <p>Drink: <?php echo $drink; ?></p>
+                                    <p style="font-weight: bold;">Payment: <?php echo $price; ?></p>
                                   </div>
                                 </div>
                                 <div class="col-md-12">

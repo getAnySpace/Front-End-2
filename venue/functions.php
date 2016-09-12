@@ -184,8 +184,20 @@
 				<p class="rate-unit">' . $y . '</p>
 				<input type="hidden" id="total-price"/>';
 	}
-	/*
-	 * 	<p class="venue-price">$30</p>
-		<p class="rate-unit">PER PERSON</p>
-	 */
+	
+	function getCapacity($id) {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->queryAny("SELECT `capacity` FROM `space` WHERE `id`=" . $id);
+		$a = $db->resultArray();
+		
+		$cap = $a[0]['capacity'];
+		echo 	"<option>1-" . floor($cap / 6) . "</option>
+				<option>" . (floor($cap / 6) + 1) . "-" . floor(2 * $cap / 6) . "</option>
+				<option>" . (floor(2 * $cap / 6) + 1) . "-" . floor(3 * $cap / 6) . "</option>
+				<option>" . (floor(3 * $cap / 6) + 1) . "-" . floor(4 * $cap / 6) . "</option>
+				<option>" . (floor(4 * $cap / 6) + 1) . "-" . floor(5 * $cap / 6) . "</option>
+				<option>" . (floor(5 * $cap / 6) + 1) . "-" . $cap . "</option>
+				";
+	}
+	
 ?>	

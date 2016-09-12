@@ -176,7 +176,7 @@ footer .pull-left {
 }
 
 .venue-box {
-  margin-top: -6em;
+  margin-top: -5.5em;
   padding: 0 0 0 0;
   border: 1px solid gray;
   box-sizing: border-box;
@@ -425,9 +425,31 @@ button.contact-venue {
 }
 
 
+.venue-box .datetimepicker {
+    background: #f1f1f2;
+    height: 2.85714em;
+    line-height: 2.85714em;
+    padding: 0 38px 0 8px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    color: #646769;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.venue-box .datetimepicker {
+    background: url("../img/select-arrow.png") no-repeat right;
+    /*width: 21px;
+    height: 8px;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;*/
+    background-size: 21px 8px;
+}
 
-
-.customselect {
+.customselect, .venue-box .datetimepicker {
 	width: 100%;
     border: 1px solid gray;
     border-radius: 0px;
@@ -436,7 +458,7 @@ button.contact-venue {
     width: 9em;
 }
 
-.billing-info .customselect {
+.billing-info .customselect, .venue-box .datetimepicker {
   margin: 0 0 1.4em 0;
 }
 .customselect .csbox, .customselect .cslist {
@@ -446,6 +468,14 @@ button.contact-venue {
 	padding-left: 0 !important;
 	border: 1px solid gray;
 }
+
+.venue-box .datetimepicker {
+	margin-left: 3px;
+	margin-right: 2.5px;
+	margin-top: 0.4em;
+	margin-bottom: 0.4em;
+}
+
 
 /* css for checked dropped down
    https://codepen.io/elmahdim/pen/hlmri
