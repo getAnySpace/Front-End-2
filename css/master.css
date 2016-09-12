@@ -183,8 +183,14 @@ footer .pull-left {
 }
 
 .venue-box-top {
-  background-color: #514ca9;
+  background-color: #444;
   color: white; 
+  padding: .6em 0 0 0;
+}
+
+.venue-box-below {
+  background-color: #888;
+  color: white;
   padding: .6em 0 0 0;
 }
 
@@ -729,4 +735,9 @@ a.list-inactive {
 
 .confirmation-details {
   padding-top: 2em;
+}
+
+.fancybox img {
+  padding-right: 1em;
+  padding-bottom: 1.4em;
 }
