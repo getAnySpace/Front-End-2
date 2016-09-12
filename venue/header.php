@@ -18,7 +18,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title><?php getName(); ?> | AnySpace</title>
+		<title><?php getName($venue_id); ?> | AnySpace</title>
 		<link rel="shortcut icon" href="../img/icon.png">
 
 		<!-- Bootstrap core CSS -->
@@ -61,7 +61,7 @@
 	<!-- NAVBAR
 	================================================== -->
 	<body class="venue-page">
-		<?php echo '<style> .venue-cover { background-image: url("' . getBackground() . '"); } </style>'; ?>
+		<?php echo '<style> .venue-cover { background-image: url("' . getBackground($venue_id) . '"); } </style>'; ?>
 		<div class="navbar-wrapper">
 			<div class="container">
 				<nav class="navbar navbar-inverse navbar-static-top">

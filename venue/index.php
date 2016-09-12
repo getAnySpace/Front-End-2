@@ -11,11 +11,11 @@ include "header.php";
 		<div class="col-md-12">
 			<div class="col-md-4 col-md-offset-3 venue-detail">
 				<div class="venue-block venue-description">
-					<h1><?php getName(); ?></h1>
-					<h2><?php getNeighbourhood(); ?> | <?php getAddress(); ?></h2>
+					<h1><?php getName($venue_id); ?></h1>
+					<h2><?php getNeighbourhood($venue_id); ?> | <?php getAddress($venue_id); ?></h2>
 					<h3>ABOUT THIS VENUE</h3>
 					<p>
-						<?php getAbout(); ?>
+						<?php getAbout($venue_id); ?>
 					</p>
 				</div>
 				<div class="venue-block venue-amenities">
@@ -23,12 +23,7 @@ include "header.php";
 					<div class="row amenities">
 						<div class="col-md-6 ">
 							<ul>
-								<?php getAmenities(); ?>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul>
-								<?php getAmenities(); ?>
+								<?php getAmenities($venue_id); ?>
 							</ul>
 						</div>
 					</div>
@@ -36,20 +31,20 @@ include "header.php";
 				<div class="venue-block venue-availability">
 					<h3>AVAILABILITY</h3>
 					<ul class="availability">
-						<?php getAvailability(); ?>
+						<?php getAvailability($venue_id); ?>
 					</ul>
 				</div>
 				<div class="venue-block venue-photos">
 					<h3>PHOTOS</h3>
 					<ul>
-						<?php getPhotos(); ?>
+						<?php getPhotos($venue_id); ?>
 					<ul>
 					<p>
-						<img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php urlencode(getAddress()); ?> 
+						<img src="https://maps.googleapis.com/maps/api/staticmap?center=<?php urlencode(getAddress($venue_id)); ?> 
             			&zoom=13
             			&size=600x300
             			&maptype=roadmap
-						&markers=color:purple%7Clabel:AS%7C<?php urlencode(getAddress()); ?>
+						&markers=color:purple%7Clabel:AS%7C<?php urlencode(getAddress($venue_id)); ?>
             			&key=AIzaSyCmeN8Mu9qlrwSCNLGUdjw5R0Gex6tr9Qg"/>
 					</p>
 				</div>
@@ -58,12 +53,7 @@ include "header.php";
 					<div class="row rules">
 						<div class="col-md-6">
 							<ul>
-								<?php getRules(); ?>
-							</ul>
-						</div>
-						<div class="col-md-6">
-							<ul>
-								<?php getRules(); ?>
+								<?php getRules($venue_id); ?>
 							</ul>
 						</div>
 					</div>
@@ -71,19 +61,19 @@ include "header.php";
 				<div class="venue-block venue-policy">
 					<h3>CANCELLATION POLICY &amp; SECURITY DEPOSIT</h3>
 					<ul class="policy">
-						<?php getPolicies(); ?>
+						<?php getPolicies($venue_id); ?>
 					</ul>
 				</div>
 			</div>
 
 			<div class="col-md-2 venue-box">
 				<div>
+					<form method="get" action="../payment.php">
 					<div class="venue-box-top">
-			              <p class="venue-price">$30</p>
-			              <p class="rate-unit">PER PERSON</p>
+			              <?php getPrice($venue_id); ?>
 			              <div style="clear: both;"></div>
 			          </div>
-			          <form method="get" action="../payment.php">
+			          
 			            <div class="venue-options">
 			              <div>
 			                <select>

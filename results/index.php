@@ -146,7 +146,7 @@
             </div>
             <div class="col-md-12 result-options">
               <div class="col-md-3 col-md-offset-3">
-                <a class="result-list-type list-left" href="#">LIST</a><a class="result-list-type list-right list-inactive" href="#">MAP</a>  
+                <a class="result-list-type list-left" href="#" onclick="mapOn(false);">LIST</a><a class="result-list-type list-right list-inactive" href="#" onclick="mapOn(true);">MAP</a>  
               </div>
               <div class="col-md-3 sort-by">
                 <form method="get">
@@ -160,6 +160,7 @@
                 </form>
               </div>
             </div>
+            <div id="map"></div>
             <?php getSearch(); ?>
           </div>
       </div>
@@ -203,5 +204,49 @@
         });
     </script>
 
+	<script>
+      var map;
+      var geocoder;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 12
+        });
+      	geocoder = new google.maps.Geocoder();
+      	
+      	<?php mapAllAddress(); ?>
+      }
+      
+      
+      function geocodeAddress(address, contentString) {
+      	
+       var pinColor = "514ca9";
+       var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|" + pinColor,
+        new google.maps.Size(21, 34),
+        new google.maps.Point(0,0),
+        new google.maps.Point(10, 34));
+        
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            map.setCenter(results[0].geometry.location);
+            var infowindow = new google.maps.InfoWindow({
+	          content: contentString
+	        });
+            var marker = new google.maps.Marker({
+              map: map,
+              position: results[0].geometry.location,
+              icon: pinImage
+            });
+            marker.addListener('click', function() {
+	          infowindow.open(map, marker);
+	        });
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUvGTQXL8ttL9R9tjcrLIEBMQZ9PuZsiQ&callback=initMap"
+    async defer></script>
   </body>
 </html>

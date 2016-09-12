@@ -10,6 +10,7 @@ function init() {
 	inner.css('padding-top',((h - inner.height()) * 2/3));
 	var search = jQuery("#search");
 	
+	jQuery("#map").height(h - 338);
 }
 
 
@@ -77,6 +78,8 @@ function stripeResponseHandler(status, response) {
   } else { // Token was created!
   	
   	console.log("Token was created!");
+  	
+  	//TODO: add secure text file safe keep (Joe's recomendation) here
 
     // Get the token ID:
     var token = response.id;
@@ -90,3 +93,20 @@ function stripeResponseHandler(status, response) {
     $form.get(0).submit();
   }
 };
+
+
+
+function mapOn(on) {
+	if (on) {
+		jQuery('#map').show();
+		initMap();
+		jQuery('.list-right').removeClass('list-inactive');
+		jQuery('.list-left').addClass('list-inactive');
+	}
+	else {
+		jQuery('#map').hide();
+		jQuery('.list-right').addClass('list-inactive');
+		jQuery('.list-left').removeClass('list-inactive');
+	}
+	return false;
+}

@@ -81,6 +81,7 @@ footer .pull-left {
   text-align: right; 
   list-style: none;
   font-size: 1.4em;
+  text-transform: uppercase;
 }
 
 .rules ul {
@@ -183,9 +184,12 @@ footer .pull-left {
 }
 
 .venue-box-top {
-  background-color: #444;
+  background-color: #514ca9;
   color: white; 
   padding: .6em 0 0 0;
+}
+.venue-box-top:nth-of-type(2) {
+	background-color: #444;
 }
 
 .venue-box-below {
@@ -296,7 +300,7 @@ button.contact-venue {
 
 #confirmation input {
   text-align: center;
-  background-color: #444;
+  background-color: #514ca9;
   color: white;
   height: 3em; 
   padding: 0 1em 0 1em;
@@ -546,8 +550,8 @@ a.result-list-type {
 }
 
 a.list-left {
-  background-color: white;
-  color: #444;
+  background-color: #444;
+  color: white;
   border: 2px solid #444;
   border-right: 0;
   
@@ -555,14 +559,14 @@ a.list-left {
 }
 
 a.list-right {
-  background-color: white;
-  color: #444;
+  background-color: #444;
+  color: white;
   border: 2px solid #444;
 }
 
 a.list-inactive {
-  background-color: #444;
-  color: white;
+  background-color: white;
+  color: #444;
 }
 
 .sort-by {
@@ -740,4 +744,26 @@ a.list-inactive {
 .fancybox img {
   padding-right: 1em;
   padding-bottom: 1.4em;
+}
+
+#map {
+	height: 100%;
+	width: 100%;
+	min-height: 500px;
+	min-width: 500px;
+	display: none;
+	margin-top: 2em;
+}
+.result-options {
+	margin-bottom: 2em;
+}
+
+.col-md-2.venue-box > *.fix {
+	position: fixed;
+    width: inherit;
+    top: 0;
+    border: inherit;
+}
+.fix .venue-options {
+	padding-right: 1.6em;
 }

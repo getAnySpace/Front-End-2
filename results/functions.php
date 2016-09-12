@@ -186,6 +186,17 @@
 			}
 		}
 	}
+
+	function mapAllAddress() {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->queryAny('SELECT `name`, `neighbourhood`, `description`, `street`, `city`, `state`, `zip` FROM `venue`');
+		$a = $db->resultArray();
+		
+		for ($i = sizeof($a) - 1; $i >= 0; $i--) {
+			$content = 	"<p>" . $a[$i]['name'] . "</p>";
+			echo "geocodeAddress('" . $a[$i]['street'] . ', ' . $a[$i]['city'] . ' ' . $a[$i]['state'] . ', ' . $a[$i]['zip'] . "', \"" . $content . "\");";
+		}
+	} 
 	
 	function getNumber() {
 		$db = $GLOBALS['dataBase'];

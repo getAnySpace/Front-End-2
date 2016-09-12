@@ -1,21 +1,86 @@
 <?php
 	require 'lib/Stripe.php';
 	
+	$company;
+	$first;
+	$last;
+	$email;
+	$address1;
+	$address2;
+	$city;
+	$state;
+	$zip;
+	$phone;
+	$venue;
+	$time;
+	$guests;
+	$food;
+	$drink;
+	$price;
+	
 	if ($_POST) {
+		
+		if (isset($_POST['company'])) {
+			$company = $_POST['company'];
+		}
+		if (isset($_POST['first'])) {
+			$first = $_POST['first'];
+		}
+		if (isset($_POST['last'])) {
+			$last = $_POST['last'];
+		}
+		if (isset($_POST['email'])) {
+			$email = $_POST['email'];
+		}
+		if (isset($_POST['address1'])) {
+			$address1 = $_POST['address1'];
+		}
+		if (isset($_POST['city'])) {
+			$city = $_POST['city'];
+		}
+		if (isset($_POST['state'])) {
+			$state = $_POST['state'];
+		}
+		if (isset($_POST['zip'])) {
+			$zip = $_POST['zip'];
+		}
+		if (isset($_POST['phone'])) {
+			$phone = $_POST['phone'];
+		}
+		if (isset($_POST['venue'])) {
+			$venue = $_POST['venue'];
+		}
+		if (isset($_POST['time'])) {
+			$time = $_POST['time'];
+		}
+		if (isset($_POST['guests'])) {
+			$guests = $_POST['guests'];
+		}
+		if (isset($_POST['food'])) {
+			$food = $_POST['food'];
+		}
+		if (isset($_POST['drink'])) {
+			$drink = $_POST['drink'];
+		}
+		if (isset($_POST['price'])) {
+			$price = $_POST['price'];
+		}
+		
+		
 		Stripe::setApiKey("sk_test_n4nWwrFvbqG4nYo8RXfZgWXy");
 		$error = '';
 		$success = '';
 		try {
-			if (empty($_POST['zip'])) {
+			/*if (empty($_POST['zip'])) {
 				throw new Exception("Fill out all required fields.");
-			}
+			}*/
 			if (!isset($_POST['stripeToken'])) {
 				throw new Exception("The Stripe Token was not generated correctly");
 			}
 			Stripe_Charge::create(array("amount" => 30000,
 										"currency" => "usd",
-										"source" => $_POST['stripeToken'],
-										"description" => "test"));
+										"card" => $_POST['stripeToken'],
+										"description" => $first . " " . $last . " - " . $venue));
 			$success = '<script>console.log("Your payment was successful");</script>';
 			echo $success;
 		}
@@ -94,7 +159,7 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" href="#"><img src = "img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
+							<a class="navbar-brand" href="index.html"><img src = "img/anyspace-door-logo.svg" alt="AnySpace Door Logo"/></a>
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav navbar-right">

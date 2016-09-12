@@ -245,6 +245,7 @@
 							</div>
 
 							<div class="col-md-2 venue-box">
+								<div>
 								<div class="venue-box-top">
 									<p class="venue-price">
 										$30
@@ -321,7 +322,7 @@
 										CONTACT VENUE
 									</button>
 								</div>
-
+								</div>
 							</div>
 				</form>
 				<footer class="landing-footer">
