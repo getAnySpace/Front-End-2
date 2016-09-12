@@ -201,11 +201,11 @@
 								<div class="venue-block payment-info">
 									<div class="clear">
 										<label class="left">CARD NUMBER</label>
-										<input type="text" class="right" data-stripe="number"/>
+										<input type="text" class="right" data-stripe="number" maxlength="16"/>
 									</div>
 									<div class="clear">
 										<label class="left">EXPIRATION DATE (MM/YY)</label>
-										<input type="text" class="right" data-stripe="exp"/>
+										<input type="text" class="right" data-stripe="exp" maxlength="5"/>
 									</div>
 									<div class="clear">
 										<label class="left">CCV</label>
