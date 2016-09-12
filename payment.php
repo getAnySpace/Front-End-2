@@ -83,10 +83,11 @@
 				</nav>
 			</div>
 			<div class="container content container-fluid">
-				<form method="get">
+				<form action="confirmation.php" method="POST" id="payment-form">
 					<div class="row-fluid">
 
 						<div class="col-md-12">
+							<span class="payment-errors"></span>
 							<div class="col-md-4 col-md-offset-3 venue-detail">
 								<div class="venue-block venue-description">
 									<h1>PUZZLE'S BAR</h1>
@@ -188,7 +189,7 @@
 									</div>
 									<div class="clear">
 										<label class="left">ZIP</label>
-										<input type="text" class="right"/>
+										<input type="text" class="right" data-stripe="address_zip"/>
 									</div>
 									<div class="clear">
 										<label class="left">PHONE</label>
@@ -200,19 +201,19 @@
 								<div class="venue-block payment-info">
 									<div class="clear">
 										<label class="left">CARD NUMBER</label>
-										<input type="text" class="right"/>
+										<input type="text" class="right" data-stripe="number"/>
 									</div>
 									<div class="clear">
 										<label class="left">EXPIRATION DATE (MM/YY)</label>
-										<input type="text" class="right"/>
+										<input type="text" class="right" data-stripe="exp"/>
 									</div>
 									<div class="clear">
 										<label class="left">CCV</label>
-										<input type="text" class="right"/>
+										<input type="text" class="right" data-stripe="cvc"/>
 									</div>
 									<div class="clear"></div>
 								</div>
-								<a id="vi" onclick='hide("#vi")'><h1>VENUE INFO</h1></a>
+								<a id="vr" onclick='hide("#vr")'><h1>VENUE RULES</h1></a>
 								<div class="venue-block payment-venue-rules">
 									<div>
 										<h3>Cancellation Policy</h3>
@@ -315,9 +316,7 @@
 									</div>
 								</div>
 								<div class="venue-actions">
-									<button class="book-now" is="book-now">
-										CONFIRM PAYMENT
-									</button>
+									<input type="submit" class="book-now submit" is="book-now" value="CONFIRM PAYMENT"/>
 									<button class="contact-venue">
 										CONTACT VENUE
 									</button>
@@ -368,6 +367,10 @@
 						roundTime : 'ceil',
 					});
 				</script>
-
+				
+				<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+				<script type="text/javascript">
+				  Stripe.setPublishableKey('pk_test_84NopSnEJqKnVMWaCvfX8G06');
+				</script>
 	</body>
 </html>

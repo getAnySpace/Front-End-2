@@ -5,52 +5,67 @@
 	$dataBase->selectTable('space');
 	$dataBase->json();
 	
-	function getName() {
+	function getName($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('name', 'space', 'venue_id', 1);
+		$result = $db->selectAny('name', 'space', 'id', $id);
 		$a = $db->resultArray();
 		
-		echo $a[0]['name'];
+		return $a[0]['name'];
 	}
 	
-	function getNeighbourhood() {
+	function getNeighbourhood($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('neighbourhood', 'venue', 'id', 1);
+		$result = $db->selectAny('neighbourhood', 'venue', 'id', $id);
 		$a = $db->resultArray();
 		
-		echo $a[0]['neighbourhood'];
+		if (isset($a[0]['neighbourhood'])) {
+			return $a[0]['neighbourhood'];
+		}
 	}
 	
-	function getAddress() {
+	function getAddress($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('street`, `city`, `state`, `zip', 'venue', 'id', 1);
+		$result = $db->selectAny('street`, `city`, `state`, `zip', 'venue', 'id', $id);
 		$a = $db->resultArray();
 		
-		echo $a[0]['street'] . ', ' . $a[0]['city'] . ', ' . $a[0]['state'] . ' ' . $a[0]['zip'];
+		return $a[0]['street'] . ', ' . $a[0]['city'] . ', ' . $a[0]['state'] . ' ' . $a[0]['zip'];
 	}
 	
-	function getCity() {
+	function getCity($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('city', 'venue', 'id', 1);
+		
+		$result = $db->selectAny('venue_id', 'space', 'id', $id);
 		$a = $db->resultArray();
 		
-		echo $a[0]['city'];
+		$vid = $a[0]['venue_id'];
+		
+		$result = $db->selectAny('city', 'venue', 'id', $vid);
+		$a = $db->resultArray();
+		
+		return $a[0]['city'];
 	}
 	
-	function getAbout() {
+	function getAbout($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('description', 'space', 'venue_id', 1);
+		
+		$result = $db->selectAny('venue_id', 'space', 'id', $id);
 		$a = $db->resultArray();
 		
-		echo $a[0]['description'];
+		$vid = $a[0]['venue_id'];
+		
+		$result = $db->selectAny('description', 'space', 'venue_id', $vid);
+		$a = $db->resultArray();
+		
+		return $a[0]['description'];
 	}
 	
-	function getVenueType() {
+	function getVenueType($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('type', 'space', 'venue_id', 1);
+		
+		$result = $db->selectAny('type', 'space', 'id', $id);
 		$a = $db->resultArray();
 		
-		echo $a[0]['type'];
+		return $a[0]['type'];
 	}
 	
 	/**
@@ -59,7 +74,8 @@
 	 */
 	function getAmenities() {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('amenity', 'amenities', 'place_id', 1);
+		//$result = $db->selectAny('amenity', 'amenities', 'place_id', $id);
+		$result = $db->queryAny('SELECT DISTINCT `amenity` FROM `amenities`');
 		$a = $db->resultArray();
 		
 		for ($i=0; $i < sizeof($a); $i++) {
@@ -84,9 +100,9 @@
 	/**
 	 * @return arrayed output of <li>'s with <img>'s
 	 */
-	function getPhotos() {
+	function getPhotos($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('link', 'photos', 'place_id', 1);
+		$result = $db->queryAny('link', 'photos', 'place_id', $id);
 		$a = $db->resultArray();
 		
 		for ($i=0; $i < sizeof($a); $i++) {
@@ -100,9 +116,9 @@
 	 * will need IF LENGTH > #, THEN MAKE 2 COLUMNS
 	 * @return arrayed output of <li>'s with rules
 	 */
-	function getRules() {
+	function getRules($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('rule', 'rules', 'place_id', 1);
+		$result = $db->selectAny('rule', 'rules', 'place_id', $id);
 		$a = $db->resultArray();
 		
 		for ($i=0; $i < sizeof($a); $i++) {
@@ -116,9 +132,9 @@
 	 * will need IF LENGTH > #, THEN MAKE 2 COLUMNS
 	 * @return arrayed output of <li>'s with policies
 	 */
-	function getPolicies() {
+	function getPolicies($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAny('policy', 'policies', 'venue_id', 1);
+		$result = $db->selectAny('policy', 'policies', 'venue_id', $id);
 		$a = $db->resultArray();
 		
 		for ($i=0; $i < sizeof($a); $i++) {
@@ -129,12 +145,53 @@
 	}
 	
 	
-	function getBackground() {
+	function getBackground($id) {
 		$db = $GLOBALS['dataBase'];
-		$result = $db->selectAnyMult('link', 'photos', '`place_id`=1 AND `default_pic`=1');
+		$result = $db->selectAnyMult('link', 'photos', '`place_id`=' . $id . ' AND `default_pic`=1');
 		$a = $db->resultArray();
 		
-		return $a[0]['link'];
+		if (isset($a[0]['link'])) {
+			return $a[0]['link'];
+		}
+		else {
+			return "http://localhost:8080/Front-End-2/img/anyspace-venue.jpg";
+		}
 	}
 	
+	
+	function getSearch() {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->queryAny('SELECT `id` FROM `space`');
+		$a = $db->resultArray();
+		
+		for ($i=0; $i < sizeof($a); $i++) {
+			foreach ($a[$i] as $j => $k) {
+				echo '
+				<div class="col-md-12 result-item">
+					<div class="col-md-2 col-md-offset-3">
+						<a href="../venue/?venue_id=' . $k .'">
+							<img src="' . getBackground($k) . '"/>
+						</a>
+					</div>    
+					<div class="col-md-4">
+						<a href="../venue/?venue_id=' . $k .'">
+							<h1>' . getName($k) . '</h1>
+							<h2>' . getCity($k) . ' | ' . getVenueType($k) . '</h2>
+							<p>' . getAbout($k) . '</p>
+							<h2>' . getNeighbourhood($k) . '</h2>
+						</a>
+					</div>
+				</div>
+				';
+			}
+		}
+	}
+	
+	function getNumber() {
+		$db = $GLOBALS['dataBase'];
+		$result = $db->queryAny('SELECT `id` FROM `space`');
+		$a = $db->resultArray();
+		
+		echo sizeof($a);
+	}
 ?>	

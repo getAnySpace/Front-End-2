@@ -232,14 +232,14 @@ footer .pull-left {
   margin: 0em .2em .4em .2em;
   width: 9em;
 }
-.venue-actions button {
+.venue-actions button, .venue-actions input[type="submit"] {
   width: 100%;
   border: none;
   display: block;
   font-size: 1.2em;
 }
 
-button.book-now {
+.book-now {
   background-color: #514ca9;
   color: white;
   padding: .6em 0 .6em 0;

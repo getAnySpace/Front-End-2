@@ -1,11 +1,11 @@
 <?php
-	include 'functions.php';
-	
 	$venue_id;
 	
 	if (isset($_GET['venue_id'])) {
 		$venue_id = $_GET['venue_id'];
 	}
+	
+	include 'functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -156,41 +156,11 @@
                         <option>Price (Low to High)</option>
                         <option>Proximity</option>
                     </select>
-                    <span class="result-count">27 RESULTS</span>
+                    <span class="result-count"><?php getNumber(); ?> RESULTS</span>
                 </form>
               </div>
             </div>
-            <div class="col-md-12 result-item">
-              <div class="col-md-2 col-md-offset-3">
-              	<a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
-                	<img src="<?php echo getBackground(); ?>"/>
-               </a>
-              </div>    
-              <div class="col-md-4">
-             	<a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
-	                <h1><?php getName(); ?></h1>
-	                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h2>
-	                <p><?php getAbout(); ?></p>
-	                <h2><?php getNeighbourhood(); ?></h2>
-	          	</a>
-              </div>
-            </div>
-            
-            <div class="col-md-12 result-item">
-              <div class="col-md-2 col-md-offset-3">
-              	<a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
-                	<img src="<?php echo getBackground(); ?>"/>
-                </a>
-              </div>    
-              <div class="col-md-4">
-                <a href="../venue/?<?php if (isset($_GET['id'])) { echo $_GET['id'];} ?>">
-	                <h1><?php getName(); ?></h1>
-	                <h2><?php getCity(); ?> | <?php getVenueType(); ?></h2>
-	                <p><?php getAbout(); ?></p>
-	                <h2><?php getNeighbourhood(); ?></h2>
-	          	</a>
-              </div>
-            </div>
+            <?php getSearch(); ?>
           </div>
       </div>
 
