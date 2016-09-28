@@ -647,15 +647,15 @@ a.list-inactive {
 	margin-left: 4em;
 }
 
-#bi > h1, #pi > h1, #vr > h1 {
+#bi > h1, #pi > h1, #vr > h1, #ei > h1 {
 	color: #5A5A5A;
 	margin-left: 40px;
 }
-#bi, #pi, #vr {
+#bi, #pi, #vr, #ei {
 	text-decoration: none;
 	cursor: pointer;
 }
-#bi:before, #pi:before, #vr:before {
+#bi:before, #pi:before, #vr:before, #ei:before {
 	position: absolute;
 	content: ' ';
 	background: url('../img/select-arrow.png');
