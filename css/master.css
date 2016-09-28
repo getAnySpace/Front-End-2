@@ -219,7 +219,8 @@ footer .pull-left {
   margin-bottom: 1em;
 }
 
- .venue-options select {
+
+ .venue-options select, .venue-options input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -229,6 +230,10 @@ footer .pull-left {
   padding: .4em 1em .4em 1em;
   margin: .4em .2em .4em .2em;
   width: 9em;
+}
+
+.venue-options input {
+  padding: .7em 1em .7em .5em;
 }
 
 .sort-by select {
