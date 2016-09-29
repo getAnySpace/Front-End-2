@@ -93,6 +93,26 @@
 									<h1>PUZZLE'S BAR</h1>
             						<h2>PAYMENT CONFIRMATION</h2>
 								</div>
+								<a href="#" id="ei" onclick='hide("#ei")'><h1>EVENT INFO</h1></a>
+								<div class="venue-block payment-info">
+									<div class="clear">
+										<label class="left">EVENT NAME</label>
+										<input type="text" class="right"/>
+									</div>
+									<div class="clear">
+										<label class="left">CONTACT NAME</label>
+										<input type="text" class="right"/>
+									</div>
+									<div class="clear">
+										<label class="left">CONTACT EMAIL</label>
+										<input type="text" class="right"/>
+									</div>
+									<div class="clear">
+										<label class="left">CONTACT PHONE</label>
+										<input type="text" class="right"/>
+									</div>
+									<div class="clear"></div>
+								</div>
 								<a id="bi" onclick='hide("#bi")'><h1>BILLING INFO</h1></a>
 								<div class="venue-block billing-info">
 									<select>
@@ -255,7 +275,7 @@
 									</p>
 									<div style="clear: both;"></div>
 								</div>
-								<div class="venue-box-top">
+								<div class="venue-box-below">
 									<p class="venue-price">
 										$900 (30<span class="glyphicons glyphicons-user"></span>)
 									</p>
@@ -303,6 +323,10 @@
 											<option>100+</option>
 										</select>
 									</div>
+									<div class="venue-comments">
+                                      <h4>Notes</h4>
+                                      <textarea placeholder="This is where the venue will write in some important notes before buyers confirm payment."></textarea>
+                                    </div>  
 								</div>
 								<div class="venue-actions">
 									<input type="submit" class="book-now submit" is="book-now" value="CONFIRM PAYMENT"/>
